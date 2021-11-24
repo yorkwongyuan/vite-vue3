@@ -1,11 +1,17 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-// import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+export default {
+  mounted () {
+    console.log('mounted -> this.$http', this.$api)
+    this.$http.get(this.$api.notifyOrderBiz + 'ED30A583553B40F59519331DAD202081/YY000005').then(res => {
+      console.log(res, 'res')
+    })
+  }
+}
 </script>
 
+
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <!-- <HelloWorld msg="1" /> -->
-  11
+  <div>
+    <router-view></router-view>
+  </div>
 </template>

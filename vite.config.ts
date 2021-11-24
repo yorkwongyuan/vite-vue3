@@ -15,11 +15,11 @@ export default defineConfig({
     open: true, // 设置是否自动打开浏览器
     cors: true, // 允许跨域
     proxy: {
-      '/api': {
-        target: 'https://preproduction.com',
+      '/mwp': {
+        target: 'https://preproduction.mhealth100.com',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace('/api/', '/')
+        // rewrite: (path) => path.replace('/api/', '/')
       }
     }
   }
